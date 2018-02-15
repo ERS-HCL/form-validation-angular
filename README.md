@@ -21,7 +21,7 @@ Registration-form then submit button will not be enabled , whenever user enter p
    
 From this method we can get complete user details on the console in the form of array.
 
-To preview the registration-form please click here : [Click here](https://angular-x66gqc-puwncs.stackblitz.io/)
+**To preview the registration-form please click here** : [Click here](https://angular-x66gqc-puwncs.stackblitz.io/)
 
 ### Registration-Form appearance like this
 <p align="center">
