@@ -23,6 +23,7 @@ From this method we can get complete user details on the console in the form of 
 
 To preview the registration-form please click here : [Click here](https://angular-x66gqc-puwncs.stackblitz.io/)
 
+### Registration-Form appearance like this
 <p align="center">
   <img alt="Registration-Form" src="images/img1.PNG" class="img-responsive">
   <img alt="Registration-form" src="images/img2.PNG" class="img-responsive">
