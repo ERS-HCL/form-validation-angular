@@ -24,5 +24,6 @@ From this method we can get complete user details on the console in the form of 
 Demo url: [Click here](https://angular-x66gqc-puwncs.stackblitz.io/)
 
 <p align="center">
-  <img alt="Registration-Form" src="" class="img-responsive">
+  <img alt="Registration-Form" src="images/img1" class="img-responsive">
+  <img alt="Registration-form" src="images/img2" class="img-responsive">
 </p>
