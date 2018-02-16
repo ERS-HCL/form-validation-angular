@@ -4,6 +4,11 @@ Registration-Form is a simple component for Registration-Form-Page using angular
 In this form I have taken all type of input feilds which ever we use most frequently and i have performed all validations for each and every field. 
 
 ### Registration-Form appearance like this
+ 
+ <p align="center">
+  <img alt="Registration-Form" src="images/img1.PNG" class="img-responsive">
+  <img alt="Registration-form" src="images/img2.PNG" class="img-responsive">
+</p>
 
 ## Different type of input fields
 
