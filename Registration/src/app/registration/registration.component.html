@@ -1,0 +1,192 @@
+
+<form class="container" novalidate [formGroup]="form"
+(ngSubmit)= "addUser(form.value)">
+
+<div class="topic form-group">Registration Form</div>
+
+
+<!-- name -->
+
+<div class="form-group">  
+  <label for="name">Name</label><span>*</span>
+  <input type="text" placeholder="please enter your name" formControlName="name" class="form-control">
+</div>  
+<div *ngIf="form.get('name').touched && form.get('name').invalid" class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('name').hasError('required')">Name is Required !</div>
+<div *ngIf="form.get('name').hasError('pattern')">
+ Name will allow alphabets only!
+</div>
+</div>
+
+<!-- user id -->
+
+<div class="form-group">  
+  <label for="uid">UserId</label><span>*</span>
+  <input type="text" placeholder="create your userId" formControlName="uid" class="form-control">
+</div>
+<div *ngIf="form.get('uid').touched && form.get('uid') .invalid" class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('uid').hasError('required')">
+Please Create userId !
+</div>
+<div *ngIf="form.get('uid').hasError('pattern')">Starting characters should be alphabet Only and Space and Special characters not allowed except "_" 
+</div>
+</div>
+
+<!-- password -->
+
+<div class="form-group">  
+  <label for="pwd">Password</label><span>* </span>
+  <input type="password" placeholder="create your password" formControlName="pwd" class="form-control" #ip>
+</div>
+<div *ngIf="form.get('pwd').touched && form.get('pwd').invalid" class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('pwd').hasError('required')" >
+ Please create your password !
+</div>
+<div *ngIf="form.get('pwd').hasError('minlength')">
+  password should not contain less than 5 characters !
+</div>
+<div *ngIf="form.get('pwd').hasError('maxlength')">
+password should not contain more than 15 characters !
+</div>
+</div>
+
+<!-- conform password -->
+
+<div class="form-group">
+<label for="cpwd">Confirm Password</label><span>*</span>
+ <input type="password" placeholder="Re-enter your password" formControlName="cpwd" class="form-control" #cp (change)="validate(ip.value,cp.value)" >
+</div>
+<span style="border:none; background-color:#D3D3D3"    class="form-control">{{myerror}}</span>
+<div *ngIf="form.get('cpwd').hasError('required') && form.get('cpwd').touched" class="alert alert-danger" >
+<div *ngIf="form.get('cpwd').hasError('required')">
+Please Re-enter your password !
+</div>
+</div>
+
+<!-- date of birth -->
+
+<div class="form-group">  
+ <label for="dob">Date of Birth</label><span>* </span>
+ <input type="date" formControlName="dob" class="form-control">
+</div>
+<div *ngIf="form.get('dob').hasError('required') && form.get('dob').touched" class="alert alert-danger">
+<div *ngIf="form.get('dob').hasError('required')">
+Please enter your Date Of Birth !
+</div>
+</div>
+
+<!-- gender -->
+
+<div class="form-group">
+<label for="gender" >Gender</label><span>*</span>
+<label class="radio-inline">
+<input type="radio" name="gender" value="male" #m (change)="selected(m.value)" formControlName="gender" [checked]="true">Male
+</label>
+<label class="radio-inline" > 
+<input type="radio" name="gender" #f value="female" (change)="selected(f.value)" formControlName="gender">Female
+</label>
+<label class="radio-inline">
+<input type="radio" name="gender" #o value="others"(change)="selected(o.value)" formControlName="gender">Others
+</label>
+</div>
+
+<!-- country -->
+
+<div class="form-group">  
+ <label for="country">Country</label><span>*</span>
+<select name="country" formControlName="country" class="form-control">
+ <option value="">Please select Country</option>
+ <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+</select>
+<div *ngIf="form.get('country').touched && form.get('country').hasError ('required')" class="alert alert-danger">Please select your country !
+</div>
+</div>
+
+<!-- address -->
+
+<div class="form-group">  
+ <label for="address">Address</label><span>*</span>
+ <textarea  placeholder="Write your complete address details" formControlName="address" class="form-control"></textarea>
+<div *ngIf="form.get('address').touched && form.get('address').invalid"  class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('address').hasError('required')" class="form-group">Please enter your Address Details !
+</div>
+<div *ngIf="form.get('address').hasError('minlength')">
+ Please give your complete Address Details !
+</div>
+<div *ngIf="form.get('address').hasError('maxlength')">
+ should not be more than 50 characters!
+</div>
+</div>
+</div>
+
+<!-- pincode -->
+
+<div class="form-group">
+<label for="pincode">Pincode</label><span>*</span>
+<input type="text" placeholder="Enter your pincode" formControlName="pincode" class="form-control">
+</div>
+<div *ngIf="form.get('pincode').touched && form.get('pincode').invalid"  class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('pincode').hasError('required')">
+Pincode is Required !
+</div>
+<div *ngIf="form.get('pincode').hasError('minlength')">
+ Pincode must have 6 digits!
+</div>
+<div *ngIf="form.get('pincode').hasError('maxlength')">
+  Pincode must have 6 digits!
+</div>
+<div *ngIf="form.get('pincode').hasError('pattern')">
+ Invalid pincode so Please enter digits only!
+</div>
+</div>
+
+<!-- mobile number -->
+
+<div class="form-group">
+<label for="contact">Mobile Number</label><span>* </span>
+<input type="text" placeholder="Enter your Mobile number" formControlName="contact" class="form-control">
+</div>
+<div *ngIf="form.get('contact').touched && form.get('contact').invalid" class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('contact').hasError('required')">
+Mobile Number is Required !
+</div>
+<div *ngIf="form.get('contact').hasError('minlength')">
+should not be less than 10 digits!
+</div>
+<div *ngIf="form.get('contact').hasError('maxlength')">
+should not be more than 10 digits!
+</div>
+<div *ngIf="form.get('contact').hasError('pattern')">
+Invalid mobile number!
+</div>
+</div>
+
+<!-- Email Id -->
+
+<div class="form-group">
+<label for="email">E-mail</label><span>* </span>
+<input type="text" placeholder="enter your email id" formControlName="email" class="form-control">
+</div>
+<div *ngIf="form.get('email').touched && form.get('email').invalid" class="form-group" class="alert alert-danger">
+<div *ngIf="form.get('email').hasError('required')">
+Email is Required!
+</div>
+<div *ngIf="form.get('email').hasError('email') && !form.get('email').hasError('required')">
+Invalid Email!
+</div>
+</div><br>
+
+<!--  submit button -->
+<div class="form-group" class="button">
+<button type="submit" [disabled]="!form.valid" name="button" class="btn btn-success" >Submit</button>
+</div>
+
+<!-- to check whether values are coming are not  -->
+
+<ul class="list-group">
+<li *ngFor="let user of userList"  class="list-group">
+
+</li>
+</ul>
+
+</form>
