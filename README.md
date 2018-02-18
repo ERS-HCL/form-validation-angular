@@ -28,4 +28,4 @@ Registration-form then submit button will not be enabled , whenever user enter p
    
 From this method we can get complete user details on the console in the form of array.
 
-**To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-e7wg2i.stackblitz.io)
+**To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-fq1hjo.stackblitz.io)
