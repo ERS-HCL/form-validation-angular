@@ -1,13 +1,13 @@
 export interface User {
-  name:string,
-  uid:string,
-  pwd:string,
-  cpwd:string,
-  dob:string,
-  gender:string,
-  country:string,
-  address:string,
-  pincode:string,
-  contact:string,
-  email:string
-}
+    name:string,
+    userId:string,
+    password:string,
+    confirmPassword:string,
+    dateOfBirth:string,
+    gender:string,
+    country:string,
+    address:string,
+    pincode:string,
+    mobileNumber:string,
+    email:string
+  }
