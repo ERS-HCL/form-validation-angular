@@ -6,8 +6,8 @@ In this form I have taken most of the input fields and I have performed all vali
 
 ### Output Format
  
- <p align="center">
-  <img alt="Registration-Form" src="finalImg.PNG" class="img-responsive">
+ <p>
+  <img alt="Registration-Form" src="/finalImg.png" class="img-responsive">
  </p>
 
 **To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-ichuxh.stackblitz.io)
