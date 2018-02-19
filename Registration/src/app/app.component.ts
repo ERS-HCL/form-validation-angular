@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  getData(event)
+getData(userList:string[])
   {
-    console.log(event);
+    console.log(userList);
   }
 }
 
