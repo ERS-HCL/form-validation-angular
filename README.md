@@ -13,6 +13,23 @@ In this form I have taken most of the input fields and I have performed all vali
 
 **To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-ichuxh.stackblitz.io)
 
+## Using the project
+
+Download the registration folder and install the required packages and run the application. 
+
+### Installing
+
+```
+> npm install
+```
+
+### Run server
+
+```
+> ng serve
+```
+
+
 #### Input Fields for which I have done validations are
 
 name,userid,password,confirm password,Date of Birth,gender,country,address,pincode,mobile number and email address.
