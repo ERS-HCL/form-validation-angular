@@ -37,7 +37,7 @@ name,userid,password,confirm password,Date of Birth,gender,country,address,pinco
 
 For each field, if user enters invalid input it shows error message 
 
-#### Validation for submit button--
+#### Validation for submit button
 After entering all the values still if user is entering any wrong inputs then submit button will be disabled, If everything is correct then only user will be allowed to submit this form,In case of success "Success" message will be shown to user.
 
 ## @Output Decorator
