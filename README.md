@@ -11,7 +11,9 @@ In this form I have taken most of the input fields and I have performed all vali
   <img alt="Registration-form" src="images/img2.PNG" class="img-responsive">
 </p>
 
-#### Input Fields for which I have done validations are--
+**To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-ichuxh.stackblitz.io)
+
+#### Input Fields for which I have done validations are
 
 name,userid,password,confirm password,Date of Birth,gender,country,address,pincode,mobile number and email address.
 
@@ -31,4 +33,4 @@ After entering all the values still if user is entering any wrong inputs then su
    
 Using this method user can get complete user details on the console in form of an array.
 
-**To preview the demo of Registration-form please click here** : [Click here](https://angular-x66gqc-ichuxh.stackblitz.io)
+
