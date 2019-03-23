@@ -27,7 +27,7 @@ Download the Registration folder and install the required packages and run the a
 ```
 > ng serve
 ```
-
+ 
 
 #### Input Fields for which I have done validations are
 
